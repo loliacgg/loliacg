@@ -33,7 +33,7 @@ dns:
 proxies: []
 
 proxy-groups:
-  - name: " 节点选择"
+  - name: "节点选择"
     type: select
     proxies:
       - "自动选择"
@@ -42,40 +42,40 @@ proxy-groups:
     type: select
     proxies:
       - "全球直连"
-      - " 节点选择"
+      - "节点选择"
 
   - name: "Bahamut"
     type: select
     proxies:
-      - " 节点选择"
+      - "节点选择"
 
   - name: "Telegram"
     type: select
     proxies:
-      - " 节点选择"
+      - "节点选择"
       - "自动选择"
 
   - name: "OpenAI"
     type: select
     proxies:
-      - " 节点选择"
+      - "节点选择"
 
   - name: "YouTube"
     type: select
     proxies:
-      - " 节点选择"
+      - "节点选择"
       - "自动选择"
 
   - name: "Microsoft"
     type: select
     proxies:
-      - " 节点选择"
+      - "节点选择"
       - "全球直连"
 
   - name: "Steam"
     type: select
     proxies:
-      - " 节点选择"
+      - "节点选择"
       - "自动选择"
 
   - name: "自动选择"
@@ -101,13 +101,13 @@ proxy-groups:
   - name: "漏网之鱼"
     type: select
     proxies:
-      - " 节点选择"
+      - "节点选择"
       - "全球直连"
 
   - name: "GLOBAL"
     type: select
     proxies:
-      - " 节点选择"
+      - "节点选择"
       - "自动选择"
       - "全球直连"
       - "全球拦截"
@@ -244,19 +244,19 @@ rules:
   - RULE-SET,BiliBili,BiliBili
   - RULE-SET,BiliBiliIP,全球直连
   - RULE-SET,Telegeram,Telegram
-  - RULE-SET,DMM, 节点选择
+  - RULE-SET,DMM,节点选择
   - RULE-SET,Bahamut,Bahamut
   - RULE-SET,YouTube,YouTube
-  - RULE-SET,Github, 节点选择
+  - RULE-SET,Github,节点选择
   - RULE-SET,OpenAI,OpenAI
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,steam@cn,全球直连
-  - RULE-SET,Steam, 节点选择
+  - RULE-SET,Steam,节点选择
   - RULE-SET,category-games@cn,全球直连
   - RULE-SET,Category-Ads,全球拦截
   - RULE-SET,GeoSite-Private,全球直连
   - RULE-SET,GeoSite-CN,全球直连
   - RULE-SET,GeoIP-Private,全球直连
   - RULE-SET,GeoIP-CN,全球直连
-  - RULE-SET,GeoLocation-!CN, 节点选择
+  - RULE-SET,GeoLocation-!CN,节点选择
   - MATCH,漏网之鱼
