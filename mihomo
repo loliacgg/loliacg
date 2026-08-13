@@ -83,7 +83,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 180
     tolerance: 150
-    proxies: []
+    proxies:
+      - DIRECT
 
   - name: "全球直连"
     type: select
