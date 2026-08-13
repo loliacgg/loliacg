@@ -30,6 +30,17 @@ dns:
       - https://cn-05.api.vlo.cc/tls-cx
       - 8.8.8.8
 
+proxy-providers:
+  sub:
+    type: http
+    url: "你的订阅链接"
+    path: ./proxies/sub.yaml
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+
 proxies: []
 
 proxy-groups:
@@ -52,6 +63,8 @@ proxy-groups:
     interval: 180
     tolerance: 50
     filter: "(?i)港|HK|Hong Kong"
+    use:
+      - sub
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Hongkong.png"
     proxies: []
 
@@ -61,6 +74,8 @@ proxy-groups:
     interval: 180
     tolerance: 50
     filter: "(?i)台|TW|Taiwan"
+    use:
+      - sub
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Taiwan.png"
     proxies: []
 
@@ -70,6 +85,8 @@ proxy-groups:
     interval: 180
     tolerance: 50
     filter: "(?i)日|JP|Japan"
+    use:
+      - sub
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Japan.png"
     proxies: []
 
@@ -79,6 +96,8 @@ proxy-groups:
     interval: 180
     tolerance: 50
     filter: "(?i)韩|KR|South Korea"
+    use:
+      - sub
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Korea.png"
     proxies: []
 
@@ -88,6 +107,8 @@ proxy-groups:
     interval: 180
     tolerance: 50
     filter: "(?i)新|SG|Singapore"
+    use:
+      - sub
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Singapore.png"
     proxies: []
 
@@ -97,6 +118,8 @@ proxy-groups:
     interval: 180
     tolerance: 50
     filter: "(?i)美|US|United States"
+    use:
+      - sub
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/United_States.png"
     proxies: []
 
@@ -165,6 +188,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 180
     tolerance: 150
+    use:
+      - sub
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/auto.png"
     proxies: []
 
@@ -237,14 +262,14 @@ rule-providers:
   Telegeram:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/telegram.yaml"
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/telegram.yaml"
     path: ./ruleset/telegram.yaml
     interval: 86400
 
   DMM:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/dmm.yaml"
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/dmm.yaml"
     path: ./ruleset/dmm.yaml
     interval: 86400
 
