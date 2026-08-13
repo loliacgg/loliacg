@@ -30,6 +30,14 @@ dns:
       - https://cn-05.api.vlo.cc/tls-cx
       - 8.8.8.8
 
+# ==================== 代理提供者 ====================
+proxy-providers:
+  SubStore:
+    <<: *BaseProvider
+    url: 'http://127.0.0.1:3001/download/CF%20EDT?target=ClashMeta' # 替换为你的 Sub-Store 节点/组合订阅链接
+    path: ./provider/sub_store.yaml
+    override:
+      additional-prefix: '[Sub] '
 proxies: []
 
 proxy-groups:
