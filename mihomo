@@ -30,12 +30,25 @@ dns:
       - https://1.1.1.1/dns-query
       - 8.8.8.8
 
+# 订阅提供者设置
+proxy-providers:
+  MySubscription:
+    type: http
+    url: "https://example.com/sub_link" # 替换为你的实际订阅链接
+    interval: 86400
+    path: ./provider/subscription.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: https://www.gstatic.com/generate_204
+
 proxies: []
 
 proxy-groups:
   - name: "节点选择"
     type: select
-    icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/select.png"
+    use:
+      - MySubscription
     proxies:
       - "自动选择"
       - "香港节点"
@@ -51,7 +64,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 180
     tolerance: 50
-    include-all-proxies: true
+    use:
+      - MySubscription
     filter: "(?i)港|HK|Hong Kong"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Hongkong.png"
 
@@ -60,7 +74,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 180
     tolerance: 50
-    include-all-proxies: true
+    use:
+      - MySubscription
     filter: "(?i)台|TW|Taiwan"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Taiwan.png"
 
@@ -69,7 +84,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 180
     tolerance: 50
-    include-all-proxies: true
+    use:
+      - MySubscription
     filter: "(?i)日|JP|Japan"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Japan.png"
 
@@ -78,7 +94,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 180
     tolerance: 50
-    include-all-proxies: true
+    use:
+      - MySubscription
     filter: "(?i)韩|KR|South Korea"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Korea.png"
 
@@ -87,7 +104,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 180
     tolerance: 50
-    include-all-proxies: true
+    use:
+      - MySubscription
     filter: "(?i)新|SG|Singapore"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Singapore.png"
 
@@ -96,7 +114,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 180
     tolerance: 50
-    include-all-proxies: true
+    use:
+      - MySubscription
     filter: "(?i)美|US|United States"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/United_States.png"
 
@@ -165,7 +184,8 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 180
     tolerance: 150
-    include-all-proxies: true
+    use:
+      - MySubscription
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/auto.png"
 
   - name: "全球直连"
@@ -192,6 +212,8 @@ proxy-groups:
   - name: "GLOBAL"
     type: select
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/global.png"
+    use:
+      - MySubscription
     proxies:
       - "节点选择"
       - "自动选择"
