@@ -33,15 +33,15 @@ dns:
 # 锚点区
 Proxy_first: &Proxy_first
   type: select
-  proxies: [节点选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 美国节点, 欧洲节点, 全部节点, 自建/家宽节点, 全球直连]
+  proxies: [节点选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 美国节点, 欧洲节点, 全部节点, 全球直连]
 
 Direct_first: &Direct_first
   type: select
-  proxies: [全球直连, 节点选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 美国节点, 欧洲节点, 全部节点, 自建/家宽节点]
+  proxies: [全球直连, 节点选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 美国节点, 欧洲节点, 全部节点]
 
 Include_all: &Include_all
   type: select
-  proxies: [节点选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 美国节点, 欧洲节点, 全部节点, 自建/家宽节点, 全球直连]
+  proxies: [节点选择, 香港节点, 新加坡节点, 日本节点, 台湾节点, 美国节点, 欧洲节点, 全部节点, 全球直连]
   include-all: true
   exclude-filter: "(?i)(🟢 直连)"
 
@@ -107,11 +107,6 @@ proxy-groups:
       - Airport_03
     include-all: true
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/global.png"
-
-  - name: "自建/家宽节点"
-    type: select
-    proxies: []
-    icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/select.png"
 
   - name: "欧洲节点"
     <<: *Urltest_Base
@@ -330,7 +325,7 @@ rule-providers:
   GeoLocation-!CN:
     type: http
     behavior: domain
-    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geosite/geolocation-not-cn.yaml"
+    url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geosite/geolocation-!cn.yaml"
     path: ./ruleset/geolocation-not-cn.yaml
     interval: 86400
 
