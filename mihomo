@@ -30,8 +30,16 @@ dns:
       - https://cn-05.api.vlo.cc/tls-cx
       - 8.8.8.8
 
-proxies:
-  # 把你的节点填在这里，或者通过 Sparkle 的订阅功能直接写入
+
+proxy-providers:
+  Airport_01:
+    <<: *PProviders
+    proxy: "故障转移"
+    url: "订阅链接1"
+    override:
+      additional-prefix: '[机场名称1]'
+      skip-cert-verify: true
+      udp: true
 
 
 proxy-groups:
@@ -246,7 +254,7 @@ rule-providers:
   DMM:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/dmm.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/dmm.yaml"
     path: ./ruleset/dmm.yaml
     interval: 86400
 
