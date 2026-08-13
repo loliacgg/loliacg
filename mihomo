@@ -30,11 +30,6 @@ dns:
       - https://cn-05.api.vlo.cc/tls-cx
       - 8.8.8.8
 
-# ==================== 代理提供者 ====================
-# ==================== 代理提供者 ====================
-proxy-providers:
-  SubStore: {type: http, url: 'http://127.0.0.1:3001/download/CF%20EDT?target=ClashMeta', path: ./provider/sub_store.yaml, interval: 86400, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, override: {additional-prefix: '[Sub] '}}
-
 proxies: []
 
 proxy-groups:
@@ -58,8 +53,7 @@ proxy-groups:
     tolerance: 50
     filter: "(?i)港|HK|Hong Kong"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Hongkong.png"
-    use:
-      - SubStore
+    proxies: []
 
   - name: "台湾节点"
     type: url-test
@@ -68,8 +62,7 @@ proxy-groups:
     tolerance: 50
     filter: "(?i)台|TW|Taiwan"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Taiwan.png"
-    use:
-      - SubStore
+    proxies: []
 
   - name: "日本节点"
     type: url-test
@@ -78,8 +71,7 @@ proxy-groups:
     tolerance: 50
     filter: "(?i)日|JP|Japan"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Japan.png"
-    use:
-      - SubStore
+    proxies: []
 
   - name: "韩国节点"
     type: url-test
@@ -88,8 +80,7 @@ proxy-groups:
     tolerance: 50
     filter: "(?i)韩|KR|South Korea"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Korea.png"
-    use:
-      - SubStore
+    proxies: []
 
   - name: "新加坡节点"
     type: url-test
@@ -98,8 +89,7 @@ proxy-groups:
     tolerance: 50
     filter: "(?i)新|SG|Singapore"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/Singapore.png"
-    use:
-      - SubStore
+    proxies: []
 
   - name: "美国节点"
     type: url-test
@@ -108,8 +98,7 @@ proxy-groups:
     tolerance: 50
     filter: "(?i)美|US|United States"
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/United_States.png"
-    use:
-      - SubStore
+    proxies: []
 
   - name: "BiliBili"
     type: select
@@ -177,8 +166,7 @@ proxy-groups:
     interval: 180
     tolerance: 150
     icon: "https://raw.githubusercontent.com/Lanlan13-14/Rules/main/icon/auto.png"
-    use:
-      - SubStore
+    proxies: []
 
   - name: "全球直连"
     type: select
