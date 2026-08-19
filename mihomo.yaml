@@ -238,21 +238,21 @@ rule-providers:
   BiliBili:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/bilibili.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/bilibili.yaml"
     path: ./ruleset/bilibili.yaml
     interval: 86400
 
   BiliBiliIP:
     type: http
     behavior: ipcidr
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geoip/bilibili.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geoip/bilibili.yaml"
     path: ./ruleset/bilibiliip.yaml
     interval: 86400
 
   Bahamut:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/bahamut.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/bahamut.yaml"
     path: ./ruleset/bahamut.yaml
     interval: 86400
 
@@ -273,49 +273,49 @@ rule-providers:
   OpenAI:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/openai.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/openai.yaml"
     path: ./ruleset/openai.yaml
     interval: 86400
 
   YouTube:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/youtube.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/youtube.yaml"
     path: ./ruleset/youtube.yaml
     interval: 86400
 
   Microsoft:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/microsoft.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/microsoft.yaml"
     path: ./ruleset/microsoft.yaml
     interval: 86400
 
   Github:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/github.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/github.yaml"
     path: ./ruleset/github.yaml
     interval: 86400
 
   steam@cn:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/steam@cn.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/steam@cn.yaml"
     path: ./ruleset/steam@cn.yaml
     interval: 86400
 
   Steam:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/steam.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/steam.yaml"
     path: ./ruleset/steam.yaml
     interval: 86400
 
   category-games@cn:
     type: http
     behavior: domain
-    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/category-games@cn.yaml"
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geosite/category-games@cn.yaml"
     path: ./ruleset/category-games.yaml
     interval: 86400
 
